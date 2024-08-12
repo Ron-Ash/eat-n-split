@@ -39,7 +39,7 @@ function AddFriend({ handleAddFriendFF, urlImgPlaceholder }) {
   );
 }
 
-function Friend({ id, name, urlImg, balance, selected, handleAddFriendFF }) {
+function Friend({ id, name, urlImg, balance, selected, handleSelectFriendFF }) {
   return (
     <li className={selected ? "selected" : ""}>
       <img src={urlImg} alt="*" />
@@ -61,7 +61,7 @@ function Friend({ id, name, urlImg, balance, selected, handleAddFriendFF }) {
             : `You and ${name} are even`}
         </p>
       </div>
-      <button className="button" onClick={() => handleAddFriendFF(id)}>
+      <button className="button" onClick={() => handleSelectFriendFF(id)}>
         {selected ? "Close" : "Select"}
       </button>
     </li>
@@ -87,7 +87,7 @@ export default function FriendsList({
             urlImg={friend.image}
             balance={friend.balance}
             selected={selectedId === friend.id}
-            handleAddFriendFF={handleSelectedIdF}
+            handleSelectFriendFF={handleSelectedIdF}
           />
         ))}
       </ul>
