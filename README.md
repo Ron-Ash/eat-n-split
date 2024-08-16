@@ -8,4 +8,5 @@ own solution to Optional Challenge project from Udemy course The "Ultimate React
 
 - clone repository
 - enter eat-n-split project
+- run `npm install` in terminal
 - run `npm start` in terminal
